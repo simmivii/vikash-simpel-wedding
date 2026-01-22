@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #3a4a3a 0%, #4a5d4a 50%, #2d3f2d 100%);
+    background: linear-gradient(135deg, #f5f1eb 0%, #f0ebe3 50%, #ebe6dd 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +15,46 @@
     transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
     font-family: 'Playfair Display', serif;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(200, 180, 140, 0.05) 1px,
+            rgba(200, 180, 140, 0.05) 2px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 1px,
+            rgba(200, 180, 140, 0.03) 1px,
+            rgba(200, 180, 140, 0.03) 2px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(180, 160, 120, 0.02) 2px,
+            rgba(180, 160, 120, 0.02) 4px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 2px,
+            rgba(180, 160, 120, 0.02) 2px,
+            rgba(180, 160, 120, 0.02) 4px
+        ),
+        radial-gradient(circle at 20% 20%, rgba(220, 200, 170, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(220, 200, 170, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 60% 30%, rgba(200, 180, 140, 0.06) 0%, transparent 30%);
+    background-size: 
+        100% 100%,
+        100% 100%,
+        8px 8px,
+        8px 8px,
+        200px 200px,
+        250px 250px,
+        180px 180px;
 }
 
 .invitation-cover.fade-out {
@@ -33,11 +73,12 @@
 .families-text {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    color: #c5b895;
+    color: #8b6f47;
     font-weight: 400;
     letter-spacing: 4px;
     margin: 0 0 40px 0;
     text-transform: uppercase;
+    opacity: 0.9;
 }
 
 .couple-names-elegant {
@@ -48,10 +89,21 @@
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
     font-weight: 600;
-    color: #c5b895;
+    color: #6d4c2f;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     line-height: 1.2;
+}
+
+.rsvp-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #8b6f47;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
 .invitation-text {
@@ -62,7 +114,7 @@
 .hindi-invitation {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
-    color: #c5b895;
+    color: #7a5a3a;
     font-weight: 400;
     margin: 0 0 15px 0;
     letter-spacing: 1px;
@@ -73,7 +125,7 @@
 .english-invitation {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    color: #c5b895;
+    color: #7a5a3a;
     font-weight: 400;
     margin: 0;
     letter-spacing: 1px;
@@ -93,14 +145,29 @@
     position: relative;
     width: 608px;
     height: 405px;
-    background: #f8f6f0;
+    background: #f0ede5;
     border-radius: 4px;
     box-shadow: 
-        0 8px 32px rgba(0,0,0,0.2),
-        0 4px 16px rgba(0,0,0,0.1),
-        inset 0 1px 0 rgba(255,255,255,0.8);
+        0 12px 48px rgba(0,0,0,0.4),
+        0 6px 20px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.6);
     transform: perspective(1000px) rotateX(5deg);
     transition: all 0.4s ease;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 1px,
+            rgba(200,180,140,0.08) 1px,
+            rgba(200,180,140,0.08) 2px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 1px,
+            rgba(200,180,140,0.05) 1px,
+            rgba(200,180,140,0.05) 2px
+        );
 }
 
 .envelope-main:hover {
@@ -113,44 +180,58 @@
 .envelope-flap-new {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 0;
     height: 0;
-    border-left: 252px solid transparent;
-    border-right: 252px solid transparent;
-    border-top: 162px solid #f0ede5;
+    border-left: 304px solid transparent;
+    border-right: 304px solid transparent;
+    border-top: 162px solid #ebe8e0;
     z-index: 2;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .envelope-body-new {
     width: 100%;
     height: 100%;
-    background: #f8f6f0;
+    background: #f0ede5;
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 1px,
+            rgba(200,180,140,0.08) 1px,
+            rgba(200,180,140,0.08) 2px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 1px,
+            rgba(200,180,140,0.05) 1px,
+            rgba(200,180,140,0.05) 2px
+        );
 }
 
 .envelope-body-new::before {
     content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
     background: 
-        linear-gradient(45deg, transparent 40%, rgba(200,180,140,0.1) 50%, transparent 60%),
+        linear-gradient(45deg, transparent 40%, rgba(200,180,140,0.12) 50%, transparent 60%),
         repeating-linear-gradient(
             45deg,
             transparent,
-            transparent 2px,
-            rgba(200,180,140,0.05) 2px,
-            rgba(200,180,140,0.05) 4px
+            transparent 3px,
+            rgba(200,180,140,0.06) 3px,
+            rgba(200,180,140,0.06) 6px
         );
     border-radius: 2px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .envelope-logo {
@@ -158,22 +239,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Playfair Display', serif;
-    font-size: 49px;
-    font-weight: 600;
-    color: #8B4513;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    z-index: 1;
-    letter-spacing: 4px;
-    white-space: nowrap;
-    width: auto;
-    text-align: center;
+    z-index: 4;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: 3px solid #c5b895;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Contact Details Section */
+.logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .contact-section {
     padding: 50px 20px;
-    background: #4a5d4a;
+    background: #e8dcc6;
     border: 2px solid #c5b895;
     border-radius: 20px;
     margin: 20px;
@@ -181,7 +268,7 @@
 }
 
 .contact-section h2 {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 32px;
     margin-bottom: 30px;
     font-family: 'Playfair Display', serif;
@@ -196,7 +283,7 @@
 }
 
 .contact-side {
-    background: rgba(58, 74, 58, 0.7);
+    background: rgba(168, 149, 111, 0.3);
     padding: 25px;
     border-radius: 15px;
     border: 2px solid #c5b895;
@@ -205,21 +292,21 @@
 }
 
 .contact-side h3 {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 24px;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
 }
 
 .contact-numbers p {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 18px;
     margin: 10px 0;
     font-weight: 500;
 }
 
 .hotel-contact {
-    background: rgba(58, 74, 58, 0.7);
+    background: rgba(168, 149, 111, 0.3);
     padding: 25px;
     border-radius: 15px;
     border: 2px solid #c5b895;
@@ -228,14 +315,14 @@
 }
 
 .hotel-contact h3 {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 22px;
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
 }
 
 .hotel-contact p {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 20px;
     font-weight: 600;
 }
@@ -338,21 +425,7 @@
 }
 
 .wax-seal {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    width: 54px;
-    height: 54px;
-    background: radial-gradient(circle, #c5b895 0%, #b8a882 50%, #a8956f 100%);
-    border-radius: 50%;
-    z-index: 3;
-    box-shadow: 
-        0 4px 12px rgba(0,0,0,0.2),
-        inset 0 2px 4px rgba(255,255,255,0.3),
-        inset 0 -2px 4px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    cursor: pointer;
+    display: none;
 }
 
 .wax-seal:hover {
@@ -388,33 +461,260 @@
 .floral-decoration {
     position: absolute;
     left: -60px;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    z-index: 1;
+    gap: 15px;
+    z-index: 4;
 }
 
 .flower {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    position: relative;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff9eb5 0%, #f7a8c4 70%, #e85a85 100%);
+    border-radius: 50%;
+    box-shadow: 
+        0 2px 6px rgba(0,0,0,0.2),
+        inset 0 1px 2px rgba(255,255,255,0.6);
     animation: floralSway 4s ease-in-out infinite alternate;
+    opacity: 0.95;
+}
+
+.flower::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #5fb3b3 0%, #4a9999 100%);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.flower::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ff9eb5 0%, #e85a85 100%);
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .flower-2 {
     animation-delay: 1s;
-    margin-left: 10px;
+    margin-left: 15px;
+    transform: scale(0.9);
+    background: radial-gradient(circle, #5fb3b3 0%, #4a9999 70%, #3a7f7f 100%);
+}
+
+.flower-2::before {
+    width: 10px;
+    height: 10px;
+    top: -5px;
+    left: -5px;
+    background: radial-gradient(circle, #f7a8c4 0%, #e85a85 100%);
 }
 
 .flower-3 {
     animation-delay: 2s;
-    margin-left: -5px;
+    margin-left: -8px;
+    transform: scale(1.1);
+    background: radial-gradient(circle, #f7a8c4 0%, #e85a85 70%, #d6476f 100%);
+}
+
+.flower-3::after {
+    width: 12px;
+    height: 12px;
+    top: -3px;
+    right: -6px;
+    background: radial-gradient(circle, #5fb3b3 0%, #4a9999 100%);
 }
 
 @keyframes floralSway {
     0% { transform: translateX(0px) rotate(0deg); }
     100% { transform: translateX(3px) rotate(2deg); }
+}
+
+.botanical-corner {
+    position: absolute;
+    left: -80px;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 150px;
+    z-index: 4;
+}
+
+/* Eucalyptus Branches */
+.eucalyptus-branch {
+    position: absolute;
+}
+
+.branch-1 {
+    top: 0;
+    left: 0;
+    transform: rotate(-15deg);
+}
+
+.branch-2 {
+    top: 40px;
+    left: 30px;
+    transform: rotate(25deg);
+}
+
+.eucalyptus-leaf {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    background: linear-gradient(145deg, #9CAF88 0%, #7A8471 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform-origin: bottom center;
+    animation: gentleSway 4s ease-in-out infinite;
+}
+
+.leaf-e1 { top: 0; left: 0; animation-delay: 0s; }
+.leaf-e2 { top: 15px; left: 8px; transform: rotate(45deg); animation-delay: 0.5s; }
+.leaf-e3 { top: 30px; left: 2px; transform: rotate(-30deg); animation-delay: 1s; }
+.leaf-e4 { top: 45px; left: 10px; transform: rotate(60deg); animation-delay: 1.5s; }
+.leaf-e5 { top: 0; left: 0; animation-delay: 0.3s; }
+.leaf-e6 { top: 18px; left: -6px; transform: rotate(-45deg); animation-delay: 0.8s; }
+.leaf-e7 { top: 35px; left: 4px; transform: rotate(30deg); animation-delay: 1.3s; }
+
+/* Main Rose */
+.rose-bloom {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.rose-main {
+    top: 50px;
+    left: 40px;
+    width: 35px;
+    height: 35px;
+}
+
+.rose-small {
+    top: 20px;
+    left: 60px;
+    width: 25px;
+    height: 25px;
+    transform: scale(0.7);
+}
+
+.rose-petal {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #F5E6D3 0%, #E8D5C4 50%, #D4C0A8 100%);
+    transform-origin: bottom center;
+}
+
+/* Main rose petals */
+.petal-1 {
+    top: -2px; left: 10px;
+    width: 15px; height: 20px;
+    transform: rotate(-20deg);
+}
+
+.petal-2 {
+    top: 2px; right: 5px;
+    width: 18px; height: 22px;
+    transform: rotate(30deg);
+}
+
+.petal-3 {
+    bottom: 2px; right: 8px;
+    width: 16px; height: 18px;
+    transform: rotate(70deg);
+}
+
+.petal-4 {
+    bottom: -2px; left: 8px;
+    width: 17px; height: 20px;
+    transform: rotate(120deg);
+}
+
+.petal-5 {
+    top: 8px; left: 2px;
+    width: 14px; height: 16px;
+    transform: rotate(-60deg);
+}
+
+/* Small rose petals */
+.petal-s1 {
+    top: 0; left: 6px;
+    width: 12px; height: 15px;
+    transform: rotate(-30deg);
+}
+
+.petal-s2 {
+    top: 3px; right: 2px;
+    width: 14px; height: 16px;
+    transform: rotate(45deg);
+}
+
+.petal-s3 {
+    bottom: 2px; left: 4px;
+    width: 13px; height: 14px;
+    transform: rotate(100deg);
+}
+
+/* Rose centers */
+.rose-center, .rose-center-small {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #D4C0A8 0%, #C4A882 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rose-center {
+    width: 8px;
+    height: 8px;
+}
+
+.rose-center-small {
+    width: 6px;
+    height: 6px;
+}
+
+/* Rose bud */
+.rose-bud {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 15px;
+    height: 18px;
+}
+
+.bud-petal {
+    position: absolute;
+    background: linear-gradient(145deg, #E8D5C4 0%, #D4C0A8 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.bud-p1 {
+    width: 10px; height: 14px;
+    top: 0; left: 2px;
+    transform: rotate(-15deg);
+}
+
+.bud-p2 {
+    width: 8px; height: 12px;
+    top: 2px; right: 1px;
+    transform: rotate(20deg);
+}
+
+@keyframes gentleSway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(2deg); }
 }
 
 .instruction-text {
@@ -424,7 +724,7 @@
 .instruction-text p {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    color: #c5b895;
+    color: #8b6f47;
     font-weight: 400;
     letter-spacing: 3px;
     margin: 0;
@@ -433,6 +733,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    opacity: 0.9;
 }
 
 .hand-icon {
@@ -539,8 +840,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #3a4a3a 0%, #4a5d4a 50%, #2d3f2d 100%);
-    color: #c5b895;
+    background: linear-gradient(135deg, #f4eadc 0%, #eee2d6 50%, #e3d6ca 100%);
+    color: #8b6f47;
     line-height: 1.7;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -549,8 +850,8 @@ body {
 .hero {
     text-align: center;
     padding: 80px 20px 60px;
-    background: linear-gradient(135deg, #3a4a3a 0%, #4a5d4a 50%, #2d3f2d 100%);
-    color: #c5b895;
+    background: linear-gradient(135deg, #f4eadc 0%, #eee2d6 50%, #e3d6ca 100%);
+    color: #6d4c2f;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -608,7 +909,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
     font-weight: 700;
-    color: #3e2723;
+    color: #6d4c2f;
     text-shadow: 
         2px 2px 4px rgba(0,0,0,0.3),
         0 0 10px rgba(255,255,255,0.2);
@@ -636,13 +937,13 @@ body {
 
 @keyframes initialsShine {
     0% { 
-        color: #3e2723; 
+        color: #6d4c2f; 
         text-shadow: 
             2px 2px 4px rgba(0,0,0,0.3),
             0 0 10px rgba(255,255,255,0.2);
     }
     100% { 
-        color: #2d3f2d; 
+        color: #8b6f47; 
         text-shadow: 
             3px 3px 6px rgba(0,0,0,0.4),
             0 0 15px rgba(255,255,255,0.3),
@@ -712,7 +1013,7 @@ body {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #6d4c2f;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-family: 'Playfair Display', serif;
 }
@@ -720,13 +1021,13 @@ body {
 .countdown {
     text-align: center;
     padding: 30px;
-    background: #4a5d4a;
+    background: #e8dcc6;
     font-size: 22px;
     border: 2px solid #c5b895;
     border-radius: 15px;
     margin: 20px;
     box-shadow: 0 5px 15px rgba(197, 184, 149, 0.2);
-    color: #ffffff;
+    color: #6d4c2f;
 }
 
 .event {
@@ -734,9 +1035,9 @@ body {
     flex-wrap: wrap;
     margin: 50px auto;
     max-width: 1100px;
-    background: linear-gradient(145deg, #4a5d4a 0%, #3a4a3a 100%);
+    background: linear-gradient(145deg, #f8f4ea 0%, #f2e8dc 100%);
     border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(197, 184, 149, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(139, 115, 85, 0.15);
     border: 3px solid transparent;
     background-clip: padding-box;
     overflow: hidden;
@@ -759,7 +1060,7 @@ body {
 
 .event:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 15px 30px rgba(197, 184, 149, 0.2);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12), 0 15px 30px rgba(139, 115, 85, 0.25);
 }
 
 .event img {
@@ -782,10 +1083,11 @@ body {
 .details {
     padding: 30px;
     flex: 1;
+    color: #7a5a3a;
 }
 
 .details h2 {
-    color: #ffffff;
+    color: #6d4c2f;
     border-bottom: 2px solid #c5b895;
     padding-bottom: 10px;
 }
@@ -794,8 +1096,8 @@ body {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    color: #2d3f2d;
-    background: linear-gradient(135deg, #c5b895 0%, #ffffff 100%);
+    color: #5a4a3a;
+    background: linear-gradient(135deg, #c5b895 0%, #f0ebe4 100%);
     padding: 15px 30px;
     border-radius: 50px;
     border: none;
@@ -840,7 +1142,7 @@ body {
 }
 
 .photo-gallery h2 {
-    color: #ffffff;
+    color: #6d4c2f;
     font-size: 36px;
     margin-bottom: 30px;
 }
@@ -879,7 +1181,7 @@ body {
     left: 0;
     right: 0;
     background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: white;
+    color: #f4eadc;
     padding: 20px;
     text-align: center;
 }
@@ -904,7 +1206,7 @@ body {
 }
 
 .gratitude-content h2 {
-    color: #ffffff;
+    color: #6d4c2f;
     font-size: 42px;
     margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
@@ -915,23 +1217,23 @@ body {
     line-height: 1.8;
     margin-bottom: 15px;
     font-style: italic;
-    color: #ffffff;
+    color: #7a5a3a;
 }
 
 footer {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #2d3f2d, #4a5d4a);
-    color: #ffffff;
+    background: linear-gradient(135deg, #c5b895, #a8956f);
+    color: #4a3f2f;
     border-top: 3px solid #c5b895;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* RSVP Section */
 .rsvp-section {
     text-align: center;
     padding: 50px 20px;
-    background: #4a5d4a;
+    background: #e8dcc6;
     border: 2px solid #c5b895;
     border-radius: 20px;
     margin: 20px;
@@ -939,7 +1241,7 @@ footer {
 }
 
 .rsvp-section h2 {
-    color: #ffffff;
+    color: #6d4c2f;
     font-size: 32px;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -967,7 +1269,7 @@ footer {
 
 .rsvp-btn.attending {
     background: #228b22;
-    color: white;
+    color: #f4eadc;
     border-color: #006400;
 }
 
@@ -980,7 +1282,7 @@ footer {
 
 .rsvp-btn.not-attending {
     background: #dc143c;
-    color: white;
+    color: #f4eadc;
     border-color: #b22222;
 }
 
@@ -1019,10 +1321,10 @@ footer {
 /* Accommodation Section */
 .accommodation-section {
     padding: 40px 15px;
-    background: #4a5d4a;
+    background: #e8dcc6;
     border: 2px solid #c5b895;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     flex: 1;
 }
 
@@ -1093,7 +1395,7 @@ footer {
 }
 
 .accommodation-section h2 {
-    color: #ffffff;
+    color: #6d4c2f;
     font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
@@ -1104,29 +1406,29 @@ footer {
     text-align: center;
     font-size: 18px;
     margin-bottom: 40px;
-    color: #ffffff;
+    color: #7a5a3a;
 }
 
 .accommodation-form {
-    background: #4a5d4a;
+    background: #e8dcc6;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border: 2px solid #c5b895;
 }
 
 /* Funny Accommodation Styling */
 .funny-accommodation {
-    background: #4a5d4a;
+    background: #e8dcc6;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     border: 2px solid #c5b895;
     text-align: center;
 }
 
 .funny-accommodation h3 {
-    color: #ffffff;
+    color: #6d4c2f;
     font-size: 24px;
     margin-bottom: 15px;
 }
@@ -1135,7 +1437,7 @@ footer {
     display: inline-block;
     padding: 20px 30px;
     background: linear-gradient(135deg, #ff6b6b, #ff8e53);
-    color: white;
+    color: #f4eadc;
     text-decoration: none;
     border-radius: 50px;
     font-size: 18px;
@@ -1156,7 +1458,7 @@ footer {
     display: inline-block;
     padding: 20px 30px;
     background: linear-gradient(135deg, #4fc3f7, #29b6f6);
-    color: white;
+    color: #f4eadc;
     text-decoration: none;
     border-radius: 50px;
     font-size: 18px;
@@ -1176,7 +1478,7 @@ footer {
 .funny-notes {
     margin: 30px 0;
     text-align: left;
-    background: rgba(58, 74, 58, 0.7);
+    background: rgba(168, 149, 111, 0.3);
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #c5b895;
@@ -1190,7 +1492,7 @@ footer {
 .funny-notes li {
     margin: 10px 0;
     padding-left: 0;
-    color: #ffffff;
+    color: #7a5a3a;
     font-size: 16px;
 }
 
@@ -1204,24 +1506,24 @@ footer {
 /* Journey Section */
 .journey-section {
     padding: 40px 20px;
-    background: linear-gradient(135deg, #2d3f2d 0%, #4a5d4a 50%, #3a4a3a 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #e8dcc6 0%, #ddd0bb 50%, #c5b895 100%);
+    color: #4a3f2f;
     text-align: center;
     border: 2px solid #c5b895;
     border-radius: 20px;
     margin: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .journey-section h2 {
-    color: #ffffff;
+    color: #4a3f2f;
     font-size: 28px;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .journey-section p {
-    color: #ffffff;
+    color: #7a5a3a;
     font-size: 16px;
     margin-bottom: 30px;
 }
@@ -1249,7 +1551,7 @@ footer {
 }
 
 .journey-item p {
-    color: #ffffff;
+    color: #7a5a3a;
     font-size: 16px;
     line-height: 1.4;
 }
@@ -1338,7 +1640,7 @@ footer {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #ffffff;
+    color: #6d4c2f;
 }
 
 .form-group input,
@@ -1351,23 +1653,23 @@ footer {
     font-size: 16px;
     transition: all 0.3s ease;
     box-sizing: border-box;
-    background: #2d3f2d;
-    color: #ffffff;
+    background: #e8dcc6;
+    color: #4a3f2f;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border-color: #c5b895;
+    box-shadow: 0 0 10px rgba(197, 184, 149, 0.3);
 }
 
 .submit-btn {
     width: 100%;
     padding: 15px;
     background: #25d366;
-    color: white;
+    color: #f4eadc;
     border: 2px solid #20b954;
     border-radius: 50px;
     font-size: 18px;
@@ -1408,8 +1710,8 @@ footer {
 footer {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #2d3f2d, #4a5d4a);
-    color: #ffffff;
+    background: linear-gradient(135deg, #c5b895, #a8956f);
+    color: #4a3f2f;
     border-top: 3px solid #c5b895;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
