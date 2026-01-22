@@ -2,6 +2,7 @@
 function openInvitation() {
     const cover = document.getElementById('invitation-cover');
     const mainContent = document.getElementById('main-content');
+    const celebration = document.getElementById('celebration-container');
     
     // Add fade-out effect to cover
     cover.classList.add('fade-out');
@@ -10,6 +11,14 @@ function openInvitation() {
     setTimeout(() => {
         cover.style.display = 'none';
         mainContent.classList.remove('hidden');
+        
+        // Start celebration effect
+        celebration.classList.add('celebrate');
+        
+        // Remove celebration effect after 4 seconds
+        setTimeout(() => {
+            celebration.classList.remove('celebrate');
+        }, 4000);
         
         // Start background music if available
         const music = document.getElementById('backgroundMusic');

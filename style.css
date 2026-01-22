@@ -755,6 +755,268 @@
     display: none;
 }
 
+/* Celebration Effect - Patakha Style */
+.celebration-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #ff6b9d;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+/* Firework Burst 1 */
+.confetti:nth-child(1) { 
+    left: 20%; 
+    top: 30%;
+    background: #ff3b30; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 0.5s;
+}
+
+.confetti:nth-child(2) { 
+    left: 20%; 
+    top: 30%;
+    background: #ffdd59; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 0.5s;
+}
+
+.confetti:nth-child(3) { 
+    left: 20%; 
+    top: 30%;
+    background: #32d74b; 
+    animation: fireworkBurst3 3s ease-out;
+    animation-delay: 0.5s;
+}
+
+/* Firework Burst 2 */
+.confetti:nth-child(4) { 
+    left: 80%; 
+    top: 40%;
+    background: #007aff; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 1.2s;
+}
+
+.confetti:nth-child(5) { 
+    left: 80%; 
+    top: 40%;
+    background: #af52de; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 1.2s;
+}
+
+.confetti:nth-child(6) { 
+    left: 80%; 
+    top: 40%;
+    background: #ff9a56; 
+    animation: fireworkBurst3 3s ease-out;
+    animation-delay: 1.2s;
+}
+
+/* Firework Burst 3 */
+.confetti:nth-child(7) { 
+    left: 50%; 
+    top: 25%;
+    background: #ff6b9d; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 2.0s;
+}
+
+.confetti:nth-child(8) { 
+    left: 50%; 
+    top: 25%;
+    background: #ffdd59; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 2.0s;
+}
+
+.confetti:nth-child(9) { 
+    left: 50%; 
+    top: 25%;
+    background: #32d74b; 
+    animation: fireworkBurst3 3s ease-out;
+    animation-delay: 2.0s;
+}
+
+.confetti:nth-child(10) { 
+    left: 50%; 
+    top: 25%;
+    background: #ff3b30; 
+    animation: fireworkBurst4 3s ease-out;
+    animation-delay: 2.0s;
+}
+
+/* Additional Firework Bursts */
+.confetti:nth-child(11) { 
+    left: 15%; 
+    top: 60%;
+    background: #007aff; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 2.8s;
+}
+
+.confetti:nth-child(12) { 
+    left: 15%; 
+    top: 60%;
+    background: #af52de; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 2.8s;
+}
+
+.confetti:nth-child(13) { 
+    left: 15%; 
+    top: 60%;
+    background: #ffdd59; 
+    animation: fireworkBurst3 3s ease-out;
+    animation-delay: 2.8s;
+}
+
+.confetti:nth-child(14) { 
+    left: 85%; 
+    top: 20%;
+    background: #ff6b9d; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 3.5s;
+}
+
+.confetti:nth-child(15) { 
+    left: 85%; 
+    top: 20%;
+    background: #32d74b; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 3.5s;
+}
+
+.confetti:nth-child(16) { 
+    left: 85%; 
+    top: 20%;
+    background: #ff9a56; 
+    animation: fireworkBurst4 3s ease-out;
+    animation-delay: 3.5s;
+}
+
+.confetti:nth-child(17) { 
+    left: 30%; 
+    top: 50%;
+    background: #ff3b30; 
+    animation: fireworkBurst3 3s ease-out;
+    animation-delay: 1.8s;
+}
+
+.confetti:nth-child(18) { 
+    left: 70%; 
+    top: 35%;
+    background: #007aff; 
+    animation: fireworkBurst 3s ease-out;
+    animation-delay: 2.5s;
+}
+
+.confetti:nth-child(19) { 
+    left: 60%; 
+    top: 55%;
+    background: #af52de; 
+    animation: fireworkBurst2 3s ease-out;
+    animation-delay: 3.2s;
+}
+
+.confetti:nth-child(20) { 
+    left: 40%; 
+    top: 70%;
+    background: #ffdd59; 
+    animation: fireworkBurst4 3s ease-out;
+    animation-delay: 1.5s;
+}
+
+.celebration-container.celebrate .confetti {
+    opacity: 1;
+}
+
+/* Firework Burst Animations */
+@keyframes fireworkBurst {
+    0% { 
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+    20% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px 5px currentColor;
+    }
+    100% { 
+        transform: translate(150px, -100px) scale(0);
+        opacity: 0;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+}
+
+@keyframes fireworkBurst2 {
+    0% { 
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+    20% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px 5px currentColor;
+    }
+    100% { 
+        transform: translate(-120px, 80px) scale(0);
+        opacity: 0;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+}
+
+@keyframes fireworkBurst3 {
+    0% { 
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+    20% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px 5px currentColor;
+    }
+    100% { 
+        transform: translate(80px, 120px) scale(0);
+        opacity: 0;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+}
+
+@keyframes fireworkBurst4 {
+    0% { 
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+    20% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 20px 5px currentColor;
+    }
+    100% { 
+        transform: translate(-80px, -80px) scale(0);
+        opacity: 0;
+        box-shadow: 0 0 0 0 currentColor;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .names-script {
@@ -767,14 +1029,26 @@
     }
     
     .envelope-flap-new {
-        border-left-width: 125px;
-        border-right-width: 125px;
-        border-top-width: 83px;
+        border-left-width: 140px;
+        border-right-width: 140px;
+        border-top-width: 93px;
     }
     
     .envelope-logo {
-        font-size: 18px;
-        letter-spacing: 2px;
+        width: 70px;
+        height: 70px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    
+    .logo-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo-image {
+        width: 60px;
+        height: 60px;
     }
     
     .families-text {
@@ -785,6 +1059,18 @@
     .instruction-text p {
         font-size: 0.8rem;
         letter-spacing: 2px;
+    }
+    
+    .floral-decoration {
+        left: -35px;
+        transform: scale(0.85);
+    }
+    
+    .botanical-corner {
+        left: -60px;
+        width: 100px;
+        height: 120px;
+        transform: translateY(-50%) scale(0.9);
     }
 }
 
@@ -803,13 +1089,15 @@
     }
     
     .envelope-flap-new {
-        border-left-width: 100px;
-        border-right-width: 100px;
-        border-top-width: 66px;
+        border-left-width: 110px;
+        border-right-width: 110px;
+        border-top-width: 73px;
     }
     
     .envelope-logo {
-        font-size: 14px;
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
         letter-spacing: 1px;
     }
     
@@ -829,11 +1117,20 @@
     }
     
     .floral-decoration {
-        left: -30px;
+        left: -25px;
+        transform: scale(0.7);
+    }
+    
+    .botanical-corner {
+        left: -40px;
+        width: 80px;
+        height: 100px;
+        transform: translateY(-50%) scale(0.8);
     }
     
     .flower {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        transform: scale(0.7);
     }
 }
 
@@ -954,13 +1251,13 @@ body {
 /* Mobile responsiveness for logo */
 @media (max-width: 768px) {
     .logo-circle {
-        width: 110px;
-        height: 110px;
+        width: 80px;
+        height: 80px;
     }
     
     .logo-initials {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
     }
     
     .hero {
@@ -971,12 +1268,14 @@ body {
 
 @media (max-width: 480px) {
     .logo-circle {
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
     }
     
     .logo-initials {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
         letter-spacing: 1px;
     }
     
@@ -1346,12 +1645,13 @@ footer {
     }
     
     .logo-circle {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
     
     .logo-initials {
-        font-size: 2rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
     }
     
     .countdown-section {
