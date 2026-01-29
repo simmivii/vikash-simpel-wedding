@@ -126,9 +126,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // RSVP Function
 function sendRSVP(status) {
+    if (status === 'not-attending') {
+        // Show guilt-inducing message first
+        const confirmMessage = `💔 WAIT! Are you really sure you can't make it to our MOST IMPORTANT DAY? 😢\n\n` +
+                             `This is a ONCE IN A LIFETIME moment that we'll never get back... 💍✨\n\n` +
+                             `We've been planning this day dreaming of celebrating with YOU! 🥺\n\n` +
+                             `Your empty chair will be noticed... Your absence will be felt... 😭\n\n` +
+                             `Are you ABSOLUTELY sure you can't rearrange your plans? Even just for a few hours? 🙏\n\n` +
+                             `Click OK if you're really, truly, heartbreakingly sure you can't attend... 💔`;
+        
+        if (!confirm(confirmMessage)) {
+            return; // Don't send RSVP if they cancel
+        }
+        
+        // If they still choose not to attend, show final guilt message
+        alert(`💔 We understand life happens... but honestly, we're heartbroken 😢\n\n` +
+              `We'll miss you terribly on our special day! 😭\n\n` +
+              `Every photo, every laugh, every moment will remind us that you weren't there... 🥺\n\n` +
+              `We hope whatever is keeping you away is really, REALLY important! 💔`);
+    }
+    
     const message = status === 'attending' 
         ? `🎉 Hello! I will be attending Vikash & Simpel's wedding on April 25, 2026. Looking forward to celebrating with you!`
-        : `😔 Hello! Unfortunately, I won't be able to attend Vikash & Simpel's wedding on April 25, 2026. Wishing you both a wonderful celebration!`;
+        : `😔 Hello! I am absolutely heartbroken that I won't be able to attend Vikash & Simpel's wedding on April 25, 2026. I feel terrible missing your most special day. Please know that I'll be thinking of you both and sending all my love from afar. I hope you can forgive me for not being there to celebrate with you... 💔`;
     
     const whatsappURL = `https://wa.me/919835959489?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
