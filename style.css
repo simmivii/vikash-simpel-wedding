@@ -1528,6 +1528,28 @@ footer {
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.social-links {
+    margin-top: 20px;
+}
+
+.instagram-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(131, 58, 180, 0.3);
+}
+
+.instagram-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(131, 58, 180, 0.5);
+}
+
 /* RSVP Section */
 .rsvp-section {
     text-align: center;
